@@ -2,14 +2,18 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dark Fantasy RPG</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Mon RPG Dark Fantasy</title>
+  <!-- Phaser 3 en ES module depuis CDN -->
+  <script type="module">
+    import Phaser from 'https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.esm.js';
+    import { preload, create, update } from '../src/main.js';
+    new Phaser.Game({
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      scene: { preload, create, update }
+    });
+  </script>
 </head>
-<body>
-  <h1>Bienvenue dans Dark Fantasy RPG</h1>
-  <button onclick="startGame()">Commencer l'aventure</button>
-
-  <script src="script.js"></script>
-</body>
+<body></body>
 </html>
